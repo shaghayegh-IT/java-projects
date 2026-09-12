@@ -1,5 +1,7 @@
 # Memory Wall – Java Game
 
+[![Java CI with Maven](https://github.com/shaghayegh-IT/java-projects/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/shaghayegh-IT/java-projects/actions/workflows/maven.yml)
+
 ## Overview
 
 Memory Wall is a memory game built in Java with Swing. It simulates a 16×16
@@ -85,6 +87,15 @@ mvn test
 
 Rendering and mouse input are not unit-tested, since they need a real
 display and are mostly thin Swing glue code.
+
+## Continuous Integration
+
+Every push to `main` and every Pull Request targeting `main` triggers a
+GitHub Actions workflow
+([`.github/workflows/maven.yml`](.github/workflows/maven.yml)) that builds
+the project with Maven and runs the full JUnit test suite on a clean
+environment (Java 17, Temurin). The workflow fails if compilation or any
+test fails, so regressions are visible before a Pull Request is merged.
 
 ## What I Learned
 
